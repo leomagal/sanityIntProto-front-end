@@ -37,5 +37,7 @@
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
 		"sanity": "^3.65.1"
-	}
+	},
+	"engines": {
+		"node": "20"}
 }
