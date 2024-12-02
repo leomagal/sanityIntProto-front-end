@@ -1,0 +1,33 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.blog-container {
+    @apply flex m-8 mx-auto justify-center gap-8;
+}
+/* .blog-card li {
+    @apply shrink-1;
+} */
+.blog-card article {
+    @apply p-4 border-2 border-zinc-500 rounded-xl;
+}
+.blog-card img {
+    @apply mb-2 border-2 border-zinc-500 rounded-lg max-w-96;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+div > p {
+    @apply text-zinc-600 text-lg;
+}
+
+div > h1 {
+    @apply text-4xl;
+}
+
