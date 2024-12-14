@@ -30,6 +30,8 @@
                         {block.textToRender}
 
                 </svelte:element>
+            {:else}
+                <img src={block.url} alt={block.alt}>
             {/if}
         {/each}
     </div>
