@@ -65,7 +65,7 @@
 	</div>
 
 	<!-- Links right -->
-	<div class="font-bold flex space-x-4 ml-auto">
+	<div class="font-bold flex space-x-4 ml-auto pr-[3em]">
 		<a href="#responsive-header" class="text-teal-200 hover:text-white">HOME</a>
 		<a href="#responsive-header" class="text-teal-200 hover:text-white">BLOG</a>
 		<a href="#responsive-header" class="text-teal-200 hover:text-white">Q&A</a>
