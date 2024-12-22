@@ -5,6 +5,8 @@ import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({params}) => {
     const {slug} = params;
+    console.log(slug);
+    
     const rawPosts: Post[] = await 
         sanityClient.fetch(
             `*[_type == "post" && slug == $slug]`, {slug}

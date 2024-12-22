@@ -10,8 +10,8 @@
 	let { children } = $props();
 </script>
 
-	<!-- Monitors dark / light mode change -->
-	<ModeWatcher/>
+<!-- Monitors dark / light mode change -->
+<ModeWatcher/>
 
 <!-- top nav bar -->
 <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
@@ -23,9 +23,9 @@
 
 	<!-- Links in the middle -->
 	<div class="font-bold lg:flex lg:justify-center lg:flex-grow space-x-4">
-		<a href="#responsive-header" class="text-teal-200 hover:text-white">HOME</a>
-		<a href="#responsive-header" class="text-teal-200 hover:text-white">BLOG</a>
-		<a href="#responsive-header" class="text-teal-200 hover:text-white">Q&A</a>
+		<a href="/" class="text-teal-200 hover:text-white">HOME</a>
+		<a href="/blog" class="text-teal-200 hover:text-white">BLOG</a>
+		<a href="/q_and_a" class="text-teal-200 hover:text-white">Q&A</a>
 	</div>
 
 	<!-- Comunitade right -->
@@ -37,13 +37,13 @@
 	</div>
 </nav>
 	
-<!-- dark mode button
+
 	<Button variant="outline" on:click={toggleMode} size="icon">
 		<Sun  class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
 		  <Moon  class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
 		  <span class="sr-only">Toggle theme</span>
 	</Button>
--->
+
 
 <!-- page content -->
 <main class="mx-8">
@@ -66,8 +66,8 @@
 
 	<!-- Links right -->
 	<div class="font-bold flex space-x-4 ml-auto pr-[3em]">
-		<a href="#responsive-header" class="text-teal-200 hover:text-white">HOME</a>
-		<a href="#responsive-header" class="text-teal-200 hover:text-white">BLOG</a>
-		<a href="#responsive-header" class="text-teal-200 hover:text-white">Q&A</a>
+		<a href="/" class="text-teal-200 hover:text-white">HOME</a>
+		<a href="/blog" class="text-teal-200 hover:text-white">BLOG</a>
+		<a href="/q_and_a" class="text-teal-200 hover:text-white">Q&A</a>
 	</div>
 </nav>
