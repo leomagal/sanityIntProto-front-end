@@ -7,6 +7,14 @@
   	import { toggleMode } from "mode-watcher";
   	import { Button } from "$lib/components/ui/button/index.js";
 
+	import { onMount } from 'svelte';
+    import { postsStore, fetchPosts } from '../stores/postsStore';
+
+    onMount(() => {
+        fetchPosts();
+    });
+
+
 	let { children } = $props();
 </script>
 
