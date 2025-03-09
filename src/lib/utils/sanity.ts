@@ -34,9 +34,24 @@ function processPostContent(content: RawTextContent | RawImageContent) {
         const processedTextContent: ProcessedTextContent = {
             type: 'text',
             style: content.style,
-            textToRender: content.children.map((child) => child.text).join('\n'),
-        };
-        return processedTextContent;
+            textToRender: content.children.map((child) => {
+              const segment: { text: string; marks?: Array<string>; href?: string } = { text: child.text };
+              if (child.marks && child.marks.length > 0) {
+                segment.marks = child.marks;
+                const linkMark = child.marks.find(mark => 
+                  content.markDefs?.some(def => def._key === mark && def._type === 'link')
+                );
+                if (linkMark) {
+                  const linkDef = content.markDefs?.find(def => def._key === linkMark);
+                  if (linkDef && linkDef._type === 'link') {
+                    segment.href = linkDef.href;
+                  }
+                }
+              }
+              return segment;
+            }),
+          };
+          return processedTextContent;
     } 
     else {
         // Image

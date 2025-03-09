@@ -37,7 +37,7 @@ interface RawTextContent {
     style: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
     listItem?: 'bullet' | 'number'
     markDefs?: Array<{
-      href?: string
+      href: string
       _type: 'link'
       _key: string
     }>
@@ -75,7 +75,11 @@ interface ProcessedPost {
 interface ProcessedTextContent {
   type: 'text';
   style: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote'
-  textToRender: string;
+  textToRender: Array<{
+    text: string;
+    marks?: Array<string>;
+    href?: string;
+  }>;
 }
 
 interface ProcessedImageContent {

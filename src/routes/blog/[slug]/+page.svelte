@@ -1,18 +1,11 @@
 <script lang="ts">
+    import TextBlock from "$lib/components/TextBlock.svelte";
     let { data } = $props();
     // $inspect(data);
 
     const { blogPost } = data ;
     $inspect(blogPost);
     const { title, author, datePublished, content, tags, coverImageURL, coverImageAlt} = blogPost;
-
-    function getTagFromStyle(style: ProcessedTextContent['style']): string {
-        if (style === 'normal') { 
-            return "p";
-        } else {
-            return style;
-        }
-    }
 
 
 </script>
@@ -24,13 +17,7 @@
     <div>
         {#each content as block}
             {#if block.type === 'text'}
-                <svelte:element 
-                    this={getTagFromStyle(block.style)}
-                    >
-                        {block.textToRender}
-
-                </svelte:element>
-            {:else}
+            <TextBlock {block} />           {:else}
                 <img src={block.url} alt={block.alt}>
             {/if}
         {/each}
